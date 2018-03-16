@@ -544,8 +544,8 @@ function scrollama() {
   }) => {
     id = generateId();
     // elements
-    stepEl = selectAll(step);
     containerEl = container ? select(container) : null;
+    stepEl = selectAll(step, (containerEl ? containerEl : undefined));
     graphicEl = graphic ? select(graphic) : null;
 
     // error if no step selected
